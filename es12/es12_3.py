@@ -91,7 +91,7 @@ while N_events < N_f:
             num = np.sqrt(N_events*bin_probabilities[i]*(1-bin_probabilities[i]))
             if num == 0:
                 num = 0.1
-        sigma_y.append(num) # binomial fluctuation per bin
+            sigma_y.append(num) # binomial fluctuation per bin
         bin_width = abs(bin_edges[1]-bin_edges[0])
 
         my_cost_leastsq_func = LeastSquares(bin_centres, bin_content, sigma_y, leastsq_model_function) # bin_centres, bin_content, sigma_y, func_approx
